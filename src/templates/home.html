@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+
+{%block content %}
+Hello World.
+The verbatim variable is <code>{%verbatim%} {{html_var }} {%endverbatim%} </code>.
+
+<p>We can infact show this whole html verbatim if we include everything in verbatim.</p>
+<p>This random number {{ num }}  is coming from Django backend.</p> 
+
+{%for item in items%}
+ 
+<p>{{item}}</p>
+
+ 	{%if item|divisibleby:2%} 	
+     	This is even number. 	
+ 	{%endif%}
+{%endfor%}
+
+{%endblock content %}

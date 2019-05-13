@@ -14,4 +14,15 @@ def home(request):
     # '''
     # return HttpResponse(html_)
     num = random.randint(0,1000000)
-    return render(request,"base.html",{"randNum": num})
+    params = {
+        "num" : num,
+        "items": [num, random.randint(0,1000000)],
+        "bool_item": True
+        }
+    return render(request,"home.html",params)
+
+def about(request):
+    return render(request,"about.html")
+
+def contact(request):
+    return render(request,"contact.html")    

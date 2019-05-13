@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,13 @@
     <script src="main.js"></script> -->
 </head>
 <body>
-    Hello World.
-    <p>This random number: {{ randNum }}  is coming from Django backend.</p> 
+	<div> <a href="/about">About </a> </div>
+
+	<div><a href="/contact">Contact </a></div>
+
+	<div class='container'>
+		<h1>This is My First Django Project</h1>
+	    {%block content%} {%endblock content%}
+</div>
 </body>
 </html>
