@@ -24,5 +24,5 @@ urlpatterns = [
     url(r'^contact/(?P<id>\d+)/',ContactView.as_view()),    
     #url(r'^contact/$',ContactTemplateView.as_view()),
     url(r'^contact/$',ContactTemplateView.as_view(template_name='contact.html')),    
-    
+    url(r'admin/', admin.site.urls),    
 ]
