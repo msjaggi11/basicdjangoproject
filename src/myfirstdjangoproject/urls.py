@@ -18,11 +18,11 @@ from django.contrib import admin
 from restaurants.views import home, AboutTemplateView, ContactTemplateView, ContactView
 
 urlpatterns = [
+    url(r'admin/', admin.site.urls),    
     url(r'^$', home),
     #url(r'^about/$',about),
     url(r'^about/$',AboutTemplateView.as_view()),
     url(r'^contact/(?P<id>\d+)/',ContactView.as_view()),    
     #url(r'^contact/$',ContactTemplateView.as_view()),
     url(r'^contact/$',ContactTemplateView.as_view(template_name='contact.html')),    
-    url(r'admin/', admin.site.urls),    
 ]
